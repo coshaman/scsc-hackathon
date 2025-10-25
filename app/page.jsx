@@ -138,7 +138,7 @@ export default function HackathonLanding() {
       }}
     >
       <style jsx global>{`
-        html { scroll-behavior: smooth; user-select: none; }
+        html { scroll-behavior: smooth; user-select: none; word-break: keep-all;}
         section { scroll-margin-top: 90px; }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
         .reveal { animation: fadeUp .9s ease-out both; }
@@ -146,7 +146,7 @@ export default function HackathonLanding() {
         .timeline { --tl-pad: 1.5rem; position: relative; border-left: 1px solid rgba(255,255,255,0.15); padding-left: var(--tl-pad); }
         .timeline-item { position: relative; margin-bottom: 2.5rem; }
         .timeline-dot { position: absolute; left: calc(var(--tl-pad) * -1 - 0.45rem); top: 0.6rem; width: 0.9rem; height: 0.9rem; border-radius: 9999px; box-shadow: 0 0 0 2px rgba(255,255,255,0.08); }
-        .char-wrap { word-break: break-all; overflow-wrap: anywhere; }
+        .char-wrap { word-break: keep-all; overflow-wrap: normal; }
         @media (max-width: 420px) {
           .count-seg { min-width: 3.1rem; }
           .count-seg .text-2xl { font-size: 1.125rem; line-height: 1.5rem; }
