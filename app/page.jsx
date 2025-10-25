@@ -128,9 +128,7 @@ export default function HackathonLanding() {
 
   return (
     <main
-      className={`min-h-screen text-zinc-100 transition-all duration-[1600ms] ease-out ${
-        mounted ? "opacity-100" : "opacity-0 translate-y-1"
-      }`}
+      className={`min-h-screen text-zinc-100 transition-all duration-[1600ms] ease-out ${mounted ? "opacity-100" : "opacity-0 translate-y-1"}`}
       style={{
         background:
           "radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.25), transparent)," +
@@ -148,6 +146,11 @@ export default function HackathonLanding() {
         .timeline { --tl-pad: 1.5rem; position: relative; border-left: 1px solid rgba(255,255,255,0.15); padding-left: var(--tl-pad); }
         .timeline-item { position: relative; margin-bottom: 2.5rem; }
         .timeline-dot { position: absolute; left: calc(var(--tl-pad) * -1 - 0.45rem); top: 0.6rem; width: 0.9rem; height: 0.9rem; border-radius: 9999px; box-shadow: 0 0 0 2px rgba(255,255,255,0.08); }
+        .char-wrap { word-break: break-all; overflow-wrap: anywhere; }
+        @media (max-width: 420px) {
+          .count-seg { min-width: 3.1rem; }
+          .count-seg .text-2xl { font-size: 1.125rem; line-height: 1.5rem; }
+        }
       `}</style>
 
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/5 bg-white/0 border-b border-white/10">
@@ -178,10 +181,10 @@ export default function HackathonLanding() {
       <section id="top" className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 min-h-[calc(100svh-76px)] flex items-center py-16 md:py-20">
           <div className="w-full">
-            <h1 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight reveal">
+            <h1 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight reveal char-wrap">
               전국 고등학생 대상
               <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-indigo-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+              <span className="block md:inline bg-gradient-to-r from-indigo-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
                 서울대학교 SCSC 온라인 해커톤
               </span>
             </h1>
@@ -189,22 +192,17 @@ export default function HackathonLanding() {
             <div className="mt-8 grid gap-4 md:grid-cols-2 reveal">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <div className="text-sm text-white/70">지금 진행중</div>
-                <div className="mt-1 text-xl font-semibold">
-                  {active ? active.title : "대기 중"}
-                </div>
-                <div className="text-white/80">
-                  {active ? active.desc : "예정된 다음 일정을 확인해 주세요."}
-                </div>
+                <div className="mt-1 text-xl font-semibold">{active ? active.title : "대기 중"}</div>
+                <div className="text-white/80">{active ? active.desc : "예정된 다음 일정을 확인해 주세요."}</div>
               </div>
 
               <div className="rounded-2xl border border-cyan-300/25 bg-gradient-to-b from-cyan-300/10 to-transparent p-5">
                 <div className="flex items-baseline justify-between">
                   <div className="text-sm text-white/70">{active ? "진행 마감까지" : "다음 일정 시작까지"}</div>
-                  <div className="text-xs text-white/60">
-                    {mounted && target ? target.toLocaleString() : ""}
-                  </div>
+                  <div className="text-xs text-white/60">{mounted && target ? target.toLocaleString() : ""}</div>
                 </div>
-                <div className="mt-3 flex gap-2 font-mono">
+
+                <div className="mt-3 hidden md:flex gap-2 font-mono">
                   {mounted && remain ? (
                     <>
                       <TimeSeg label="일" value={remain.dd} />
@@ -217,6 +215,19 @@ export default function HackathonLanding() {
                     </>
                   ) : (
                     <div className="text-white/70">D-DAY 계산 중</div>
+                  )}
+                </div>
+
+                <div className="mt-3 grid grid-cols-2 gap-2 font-mono md:hidden">
+                  {mounted && remain ? (
+                    <>
+                      <TimeSeg label="일" value={remain.dd} />
+                      <TimeSeg label="시" value={remain.hh} />
+                      <TimeSeg label="분" value={remain.mm} />
+                      <TimeSeg label="초" value={remain.ss} />
+                    </>
+                  ) : (
+                    <div className="col-span-2 text-white/70">D-DAY 계산 중</div>
                   )}
                 </div>
               </div>
@@ -285,10 +296,7 @@ export default function HackathonLanding() {
         </div>
 
         <div className="mt-6">
-          <a
-            href="/rules"
-            className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white text-black font-semibold hover:opacity-90"
-          >
+          <a href="/rules" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white text-black font-semibold hover:opacity-90">
             규정 확인
           </a>
         </div>
@@ -371,10 +379,7 @@ export default function HackathonLanding() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="/rules"
-            className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white text-black font-semibold hover:opacity-90"
-          >
+          <a href="/rules" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white text-black font-semibold hover:opacity-90">
             규정 확인
           </a>
         </div>
@@ -384,9 +389,7 @@ export default function HackathonLanding() {
 
       <section id="submit" className="mx-auto max-w-6xl px-4 py-16 md:py-24 reveal">
         <h2 className="text-2xl md:text-3xl font-bold">예선 참가</h2>
-        <p className="mt-2 text-white/80">
-          예선 기획안은 아래 Google Form으로 제출해 주세요. 기획서 템플릿이 필요하면 양식을 다운로드할 수 있습니다.
-        </p>
+        <p className="mt-2 text-white/80">예선 기획안은 아래 Google Form으로 제출해 주세요. 기획서 템플릿이 필요하면 양식을 다운로드할 수 있습니다.</p>
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
