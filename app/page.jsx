@@ -316,9 +316,9 @@ export default function HackathonLanding() {
             </div>
           </div>
           <div className="rounded-2xl border border-cyan-300/30 bg-gradient-to-b from-cyan-300/15 to-transparent p-6 md:col-span-3">
-            <div className="text-cyan-200 font-bold">모든 예선 참가자 혜택</div>
+            <div className="text-cyan-200 font-bold">모든 본선 참가자 혜택</div>
             <div className="mt-1 text-xl font-semibold">1–2월 중 캠퍼스 투어 진행</div>
-            <p className="mt-2 text-sm text-white/80">예선 참가자 전원 대상(일정은 개별 결정)</p>
+            <p className="mt-2 text-sm text-white/80">본선 참가자 전원 대상(일정은 개별 결정)</p>
           </div>
         </div>
         <p className="mt-4 text-sm text-white/60">* 상금/부상 내역은 내부 사정에 따라 일부 조정될 수 있습니다.</p>
@@ -383,7 +383,7 @@ export default function HackathonLanding() {
       </section>
 
       <section id="submit" className="mx-auto max-w-6xl px-4 py-16 md:py-24 reveal">
-        <h2 className="text-2xl md:text-3xl font-bold">제출</h2>
+        <h2 className="text-2xl md:text-3xl font-bold">예선 참가</h2>
         <p className="mt-2 text-white/80">
           예선 기획안은 아래 Google Form으로 제출해 주세요. 기획서 템플릿이 필요하면 양식을 다운로드할 수 있습니다.
         </p>
