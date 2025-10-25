@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   title: "SCSC 고등학생 온라인 해커톤",
   description:
     "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
-  metadataBase: new URL("https://example.org"),
+  metadataBase: new URL("https://scsc-hackathon.vercel.app/"),
   openGraph: {
     title: "SCSC 고등학생 온라인 해커톤",
     description:
       "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
-    url: "https://example.org",
+    url: "https://scsc-hackathon.vercel.app/",
     siteName: "SCSC Online Hackathon",
-    images: [{ url: "/opengraph.png", width: 1200, height: 630, alt: "SCSC Hackathon" }],
+    images: [{ url: "/opengraph.jpg", width: 1200, height: 630, alt: "SCSC Hackathon" }],
     type: "website",
     locale: "ko_KR",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "전국 고등학생 SCSC 온라인 해커톤",
     description:
       "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
-    images: ["/opengraph.png"],
+    images: ["/opengraph.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
