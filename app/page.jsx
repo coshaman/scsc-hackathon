@@ -308,19 +308,19 @@ export default function HackathonLanding() {
           <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-amber-300/15 to-transparent p-6">
             <div className="text-amber-300 font-bold">1위</div>
             <div className="mt-1 text-xl font-semibold leading-snug">
-              상금 100,000원<br/>서울대학교 기계공학부 학부장상
+              상금 100,000원<br/>서울대학교 SCSC 지도교수상
             </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-slate-200/15 to-transparent p-6">
             <div className="text-slate-200 font-bold">2위</div>
             <div className="mt-1 text-xl font-semibold leading-snug">
-              상금 50,000원<br/>서울대학교 기계공학부 학부장상
+              상금 50,000원<br/>서울대학교 SCSC 지도교수상
             </div>
           </div>
           <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-amber-100/10 to-transparent p-6">
             <div className="text-amber-100 font-bold">3위</div>
             <div className="mt-1 text-xl font-semibold leading-snug">
-              서울대학교 기계공학부 학부장상
+              서울대학교 SCSC 지도교수상
             </div>
           </div>
           <div className="rounded-2xl border border-cyan-300/30 bg-gradient-to-b from-cyan-300/15 to-transparent p-6 md:col-span-3">
