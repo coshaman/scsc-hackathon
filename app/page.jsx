@@ -338,8 +338,8 @@ export default function HackathonLanding() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-semibold text-xl">예선 제출(기획서)</h3>
             <ul className="mt-3 list-disc list-inside text-white/80 space-y-1">
-              <li>형식: PDF(자유 양식, 5–10쪽 권장)</li>
-              <li>포함: 문제 정의, 핵심 아이디어, 타겟 사용자, 구현 계획(기술 스택 포함), 기대 효과</li>
+              <li>형식: PDF(자유 양식, 1-2쪽 권장)</li>
+              <li>포함: 규정 참조</li>
             </ul>
             <h4 className="mt-5 font-medium">예선 심사 기준</h4>
             <ul className="mt-2 list-disc list-inside text-white/80 space-y-1">
