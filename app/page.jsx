@@ -273,7 +273,7 @@ export default function HackathonLanding() {
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-semibold text-xl">대상</h3>
-            <p className="mt-2 text-white/80">AI 등 IT 기술에 관심이 많은 고등학생. 대학 프로그래밍 동아리에 관심 있는 학생.</p>
+            <p className="mt-2 text-white/80">AI 등 IT 기술에 관심이 많은 고등학생. 대학 프로그래밍 동아리에 관심 있는 학생. 평소에 만든 토이프로젝트를 자랑해보고 싶은 학생. 이번 기회에 피드백을 받으며 개발 경험을 만들어보고 싶은 학생. 수능 끝나고 할일이 없어서 심심한 학생. 기말고사 공부 빼면 뭐든 재밌는 학생.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-semibold text-xl">참가 형태</h3>
