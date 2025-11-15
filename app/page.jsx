@@ -16,7 +16,7 @@ export default function HackathonLanding() {
     () => [
       { date: "2025.10.25 – 11.24", title: "참가자 모집", desc: "1~5인의 팀을 구성하고 기획안을 제출해주세요.", id: "recruit" },
       { date: "2025.11.25", title: "예선 합격팀 발표", desc: "기획서 기반으로 심사를 진행해 합격팀을 발표합니다.", id: "prelim" },
-      { date: "2025.11.26 – 12.07", title: "본선", desc: "자유롭게 각자 개발을 진행해주세요.", id: "final" },
+      { date: "2025.11.26 – 12.14", title: "본선", desc: "자유롭게 각자 개발을 진행해주세요.", id: "final" },
       { date: "2025.12.14 23:59", title: "제출 마감", desc: "시연 영상, ppt, 코드, 산출물을 제출해주세요.", id: "deadline" },
       { date: "2025.12.15 – 12.17", title: "심사 진행", desc: "SCSC 내부 심사위원들이 평가를 진행합니다. 평가기준을 참고해주세요.", id: "review" },
       { date: "2025.12.18", title: "최종 결과 발표", desc: "모든 팀에 결과를 안내할 예정입니다.", id: "announce" },
