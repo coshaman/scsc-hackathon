@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SCSC 고등학생 온라인 해커톤",
   description:
-    "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
+    "온라인으로 가볍게 진행하고 상금과 SCSC 회장상, 무료 캠퍼스 투어까지 받아가세요!",
   metadataBase: new URL("https://scsc-hackathon.vercel.app/"),
   openGraph: {
     title: "SCSC 고등학생 온라인 해커톤",
     description:
-      "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
+      "온라인으로 가볍게 진행하고 상금과 SCSC 회장상, 무료 캠퍼스 투어까지 받아가세요!",
     url: "https://scsc-hackathon.vercel.app/",
     siteName: "SCSC Online Hackathon",
     images: [{ url: "/opengraph.jpg", width: 1200, height: 630, alt: "SCSC Hackathon" }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "전국 고등학생 SCSC 온라인 해커톤",
     description:
-      "온라인으로 가볍게 진행하고 상금과 학부장상, 무료 캠퍼스 투어까지 받아가세요!",
+      "온라인으로 가볍게 진행하고 상금과 SCSC 회장상, 무료 캠퍼스 투어까지 받아가세요!",
     images: ["/opengraph.jpg"],
   },
   icons: {
