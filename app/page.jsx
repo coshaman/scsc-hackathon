@@ -388,12 +388,12 @@ export default function HackathonLanding() {
       </section>
 
       <section id="submit" className="mx-auto max-w-6xl px-4 py-16 md:py-24 reveal">
-        <h2 className="text-2xl md:text-3xl font-bold">예선 참가</h2>
-        <p className="mt-2 text-white/80">예선 기획안은 아래 Google Form으로 제출해 주세요. 기획서 템플릿이 필요하면 양식을 다운로드할 수 있습니다.</p>
+        <h2 className="text-2xl md:text-3xl font-bold">본선 제출</h2>
+        <p className="mt-2 text-white/80">본선 제출물은 아래 Google Form으로 제출해 주세요. 제출 전에 본선 심사 방식의 제출물 안내를 꼭 확인해주세요.</p>
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="https://forms.gle/bNT3jsEXzbA93vz27"
+            href="https://forms.gle/UzjahGbtaoGMnZz96"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl px-6 py-3 bg-white text-black font-semibold hover:opacity-90"
@@ -401,11 +401,10 @@ export default function HackathonLanding() {
             Google Form으로 제출하기
           </a>
           <a
-            href={encodeURI("/기획서 양식.zip")}
-            download
+            href="/rules"
             className="rounded-xl px-6 py-3 bg-white/10 border border-white/15 hover:border-white/25"
           >
-            기획서 양식 다운로드 (ZIP)
+            규정 확인
           </a>
         </div>
       </section>
