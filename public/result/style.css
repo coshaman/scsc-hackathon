@@ -1,5 +1,17 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {
+    /* 터치 시 발생하는 파란색 하이라이트 제거 */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* 텍스트 선택 방지 (리캡의 몰입감을 위해 추가 추천) */
+    -webkit-touch-callout: none;
+    user-select: none;
+}
 
+/* 포커스 되었을 때의 테두리도 깔끔하게 제거 */
+*:focus {
+    outline: none;
+}
 :root {
     --bg-main: radial-gradient(circle at center, #1e1e3f 0%, #0a0a12 100%);
     --neon-p: #bc13fe;
