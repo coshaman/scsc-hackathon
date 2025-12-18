@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SCSC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="recap-container">
+        <div class="progress-container" id="progress-bar"></div>
+
+        <div class="slides">
+            <section class="slide active intro-slide">
+                <div class="bg-gradient"></div>
+                <div class="content">
+                    <h2 class="fade-in">THE 1ST</h2>
+                    <h1 class="main-title">SCSC<br>HACKATHON</h1>
+                    <p class="date-text">2025.11.26 - 12.14</p>
+                </div>
+            </section>
+
+            <section class="slide team-slide">
+                <div class="bg-gradient"></div>
+                <div class="content full-width">
+                    <h2 class="stat-text">총 <span class="highlight">19팀 40명</span> 참가</h2>
+                    <div class="ticker-area">
+                        <div class="ticker-wrap w1"><div class="ticker" id="ticker-1"></div></div>
+                        <div class="ticker-wrap w2"><div class="ticker" id="ticker-2"></div></div>
+                        <div class="ticker-wrap w3"><div class="ticker" id="ticker-3"></div></div>
+                        <div class="ticker-wrap w4"><div class="ticker" id="ticker-4"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide winner-slide rank-3">
+                <div class="announce-overlay" id="overlay-3">
+                    <div class="ann-content">
+                        <p class="prize-info">서울대학교 SCSC 회장상</p>
+                        <h2 class="wait-text">3rd Place</h2>
+                    </div>
+                </div>
+                <div class="content reveal-content">
+                    <div class="rank-badge">3rd Place</div>
+                    <h2 class="team-name" id="name-3"></h2>
+                    <div class="modern-card" id="fb-3"></div>
+                </div>
+            </section>
+
+            <section class="slide winner-slide rank-2">
+                <div class="announce-overlay" id="overlay-2">
+                    <div class="ann-content">
+                        <p class="prize-info">상금 50,000원 + 회장상</p>
+                        <h2 class="wait-text">2nd Place</h2>
+                    </div>
+                </div>
+                <div class="content reveal-content">
+                    <div class="rank-badge">2nd Place</div>
+                    <h2 class="team-name" id="name-2"></h2>
+                    <div class="modern-card" id="fb-2"></div>
+                </div>
+            </section>
+
+            <section class="slide winner-slide rank-1">
+                <div class="announce-overlay" id="overlay-1">
+                    <div class="ann-content">
+                        <p class="prize-info">상금 100,000원 + 회장상</p>
+                        <h1 class="wait-text gold-text">대망의 1위는...</h1>
+                    </div>
+                </div>
+                <div class="content reveal-content">
+                    <div class="rank-badge gold">1st Place</div>
+                    <h1 class="team-name gold-text shine" id="name-1"></h1>
+                    <div class="modern-card gold-border" id="fb-1"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="nav-layer">
+            <div id="prev"></div>
+            <div id="next"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
