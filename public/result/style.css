@@ -1,0 +1,138 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+    --bg-main: radial-gradient(circle at center, #1e1e3f 0%, #0a0a12 100%);
+    --neon-p: #bc13fe;
+    --neon-b: #08f7fe;
+    --gold: #f9ca24;
+    --glass: rgba(255, 255, 255, 0.08);
+}
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    color: white;
+    font-family: 'Pretendard', sans-serif;
+    overflow: hidden;
+    user-select: none;
+}
+
+#recap-container {
+    position: relative;
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 50px rgba(0,0,0,1);
+}
+
+.bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-main);
+    z-index: -1;
+}
+
+/* 프로그레스 바 */
+.progress-container {
+    position: absolute;
+    top: 15px; width: 90%; left: 5%;
+    display: flex; gap: 5px; z-index: 300;
+}
+.progress-bar-segment {
+    height: 3px; flex: 1;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%; width: 0%;
+    background: #fff;
+    transition: width 0.3s linear;
+}
+
+/* 슬라이드 공통 */
+.slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.slide.active { display: flex; }
+
+/* 1번 슬라이드 */
+.main-title { font-size: 3rem; font-weight: 900; line-height: 1.1; margin: 15px 0; }
+.date-text { opacity: 0.6; letter-spacing: 2px; }
+
+/* 2번 슬라이드: 티커 */
+.full-width { width: 100%; padding: 0 !important; }
+.stat-text { font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; }
+.highlight { color: var(--neon-b); text-shadow: 0 0 10px var(--neon-b); }
+.ticker-area { width: 100%; display: flex; flex-direction: column; gap: 15px; }
+.ticker-wrap { width: 100%; background: rgba(255,255,255,0.03); padding: 12px 0; overflow: hidden; }
+.w1 { transform: rotate(-2deg); } .w2 { transform: rotate(1deg); } .w3 { transform: rotate(-1deg); } .w4 { transform: rotate(2deg); }
+.ticker { display: flex; width: max-content; animation: ticker-move 20s linear infinite; }
+/* 2, 4번 띠 반대방향 스크롤 */
+.w2 .ticker, .w4 .ticker { animation-direction: reverse; }
+.ticker span { padding: 0 25px; font-size: 1.1rem; font-weight: 700; color: #fff; opacity: 0.8; white-space: nowrap; }
+@keyframes ticker-move { from { transform: translateX(0); } to { transform: translateX(-33.33%); } }
+
+/* 긴장감 오버레이 & 진동 */
+.announce-overlay {
+    position: absolute; inset: 0;
+    background: #000; z-index: 200;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+.announce-overlay.tension {
+    animation: tension-shake 0.1s infinite;
+    background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+}
+@keyframes tension-shake {
+    0% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, -1px); }
+    100% { transform: translate(1px, -1px); }
+}
+.wait-text { font-size: 2.5rem; font-weight: 900; margin-top: 10px; }
+
+/* 팟! 하고 튀어나오는 발표 애니메이션 */
+.reveal-content {
+    animation: impact-reveal 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes impact-reveal {
+    0% { transform: scale(0.4); opacity: 0; filter: brightness(2) blur(5px); }
+    100% { transform: scale(1); opacity: 1; filter: brightness(1) blur(0); }
+}
+
+/* 코멘트 카드 디자인 */
+.modern-card {
+    position: relative; margin-top: 30px; padding: 25px;
+    background: var(--glass); backdrop-filter: blur(15px);
+    border-radius: 20px; border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    line-height: 1.6; text-align: left; font-size: 0.95rem;
+}
+.modern-card::before {
+    content: '“'; position: absolute; top: 0px; left: 15px;
+    font-size: 4rem; color: var(--neon-p); opacity: 0.3; font-family: serif;
+}
+.gold-border { border: 1px solid rgba(249, 202, 36, 0.3); }
+.gold-border::before { color: var(--gold); }
+
+/* 상단 정보 */
+.rank-badge { padding: 6px 20px; border-radius: 30px; background: var(--neon-p); font-weight: bold; margin-bottom: 15px; box-shadow: 0 0 15px var(--neon-p); }
+.rank-badge.gold { background: var(--gold); color: #000; box-shadow: 0 0 15px var(--gold); }
+.team-name { font-size: 2.4rem; margin: 10px 0; font-weight: 900; letter-spacing: -1px; }
+.gold-text { color: var(--gold); text-shadow: 0 0 20px rgba(249, 202, 36, 0.4); }
+
+/* 네비게이션 잠금 전용 레이어 */
+.nav-layer { position: absolute; inset: 0; display: flex; z-index: 150; }
+.nav-layer.locked { pointer-events: none; }
+#prev, #next { flex: 1; cursor: pointer; }
